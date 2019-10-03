@@ -44,3 +44,34 @@ const address = {
 const today = new Date();
 console.log(today);
 console.log(typeof today);
+
+/* Type Conversion */
+let val;
+
+//Number to string
+//val = String(5);
+val = (5).toString();
+val = (true).toString();
+
+console.log(val);
+console.log(typeof val);
+console.log(val.length); // cannot get length of a number
+
+//String to number
+val = '5';
+val = Number(val);
+val = Number(true);
+//val = Number(null);
+val = Number('hello'); //NaN not a number
+val = parseInt('100.30'); //parses as an integer
+val = parseFloat('100.30'); //parses as an decimal
+console.log(val);
+console.log(typeof val);
+console.log(val.toFixed(2)); // allows to specify decimals
+
+const val1 = '5';
+const val2 = 6;
+
+const sum = val1 + val2;
+console.log(sum);
+console.log(typeof sum);
