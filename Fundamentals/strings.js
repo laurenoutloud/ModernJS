@@ -56,4 +56,33 @@ val = str.replace('Bob', 'Jack');
 //includes - gives bool based on whether or not something is included in the string
 val = str.includes('Hello');
 
-console.log(val);
+//console.log(val);
+
+/* Template Literals */
+const name = 'John';
+const age1 = 45;
+const job = 'Web Developer';
+const city = 'Miami';
+let html;
+
+//Without template strings
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age1 + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
+
+function hello(){
+    return 'hello';
+}
+
+//With template strings
+html = `
+    <ul>
+        <li>Name: ${name}</li>
+        <li>Age: ${age1}</li>
+        <li>Job: ${job}</li>
+        <li>City: ${city}</li>
+        <li>${2+2}</li>
+        <li>${hello()}</li>
+        <li>${age1 > 30 ? 'old' : 'young'}</li>
+    </ul>
+`;
+
+document.body.innerHTML = html;
